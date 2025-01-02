@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teks Melengkung dan Berputar</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .circular-text {
+            width: 100%;
+            height: 100%;
+            animation: rotate 7s linear infinite;
+        }
+
+        .circular-text:hover {
+            animation-play-state: paused;
+            cursor: grabbing;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        text {
+            font-size: 28px;
+            transition: transform 0.3s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="icon-container">
+            <i class="bi bi-pinterest"></i>
+            <div>
+                Design By</br>
+                <span>Putra Pratama</span>
+            </div>
+        </div>
+        <div class="hero-container">
+            <img src="assets/img/hero_lebar.png" width="990" alt="">
+        </div>
+        <div class="content-container">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+        </div>
+    </div>
+    <!-- Animasi Teks Berputar -->
+    <div class="container">
+        <svg viewBox="0 0 300 300" class="circular-text">
+            <path id="circlePath" d="M 150,150 m -100,0 a 100,100 0 1,0 200,0 a 100,100 0 1,0 -200,0" fill="none"
+                stroke="none" />
+            <text>
+                <textPath xlink:href="#circlePath" startOffset="0%">
+                    Copyright - Muhammmad Putra Pratama @ 2025
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
+</body>
+
+</html>
