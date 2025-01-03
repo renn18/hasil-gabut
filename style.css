@@ -18,10 +18,10 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url("assets/img/hero_lebar.png");
+    background-image: url("assets/img/hero_lebar.png"), linear-gradient(to right, #ffe5f1, #f042ff);
     background-size: cover;
     background-position: center;
-    background-color: #333;
+    background-color:#333;
     background-repeat: no-repeat;
 }
 
